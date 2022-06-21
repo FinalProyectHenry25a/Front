@@ -1,14 +1,14 @@
 import React from 'react'
+import style from './../card/Card.module.css'
 
-const Card = (name,imagen,precio)=>{
+export default function Card(props){
+    console.log(props)
     return(
-        <div className="card">
-            <h3 className="name">{name}</h3>
-            <img className="imagen" src={imagen} alt={name}> </img>
-            <h4 className="precio">{precio}</h4>
+        <div className={style.card}>
+            <h3>{props.name}</h3>
+            <img src={props.imagenes} alt="out"/>
+            <h4>{props.precio}</h4>
             <button type="submit">Agregar al carrito</button>
         </div>
     )
-
 }
-export default Card
